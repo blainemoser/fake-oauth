@@ -1,0 +1,16 @@
+{{ define "content" }}
+<label for="whereto">Direct to:</label>
+<br />
+<input id="whereto" name="whereto" type="text" />
+<br />
+<br />
+<br />
+<br />
+<button id="redirecthere">Go</button>
+<script type="text/javascript">
+    $("#redirecthere").click(function () {
+        var gohere = $("#whereto").val()
+        window.location = gohere;
+    });
+</script>
+{{ end }}

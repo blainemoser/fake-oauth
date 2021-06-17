@@ -1,0 +1,20 @@
+{{ define "content" }}
+<h1>Hello,</h1>
+<p>By installing this app you agree that its employees and/or executives and/or affiliates will have the right to
+    harvest your organs and sell them on the black Market.</p>
+<p>...Also spam your inbox with the most adorable cat memes</p>
+
+<label for="url" class="url">Here's where we're going...</label>
+<br />
+<input type="text" name="url" id="url" value="{{ .RedirectURL }}?state={{ .State }}" />
+<br />
+<br />
+<button id="redirecthere">Sure, whatever sign me up</button>
+
+<script type="text/javascript">
+    $("#redirecthere").click(function () {
+        var gohere = $("#url").val()
+        window.location = gohere;
+    });
+</script>
+{{ end }}
